@@ -12,7 +12,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 # Set the path to the Chrome WebDriver
-chrome_driver_path = os.path.join(os.getcwd(), r"C:\Users\aashi\OneDrive - somaiya.edu\Desktop\chromedriver-win64\chromedriver.exe")
+chrome_driver_path = os.path.join(os.getcwd(), "Chrome_driver_Path.exe")
 
 # Setup Selenium WebDriver
 chrome_options = Options()
@@ -39,13 +39,13 @@ gender_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2
 code_field = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[8]/div/div/div[2]/div/div[1]/div/div[1]/input')
 
 # Enter the data
-full_name_field.send_keys('Aashish Gupta')
-contact_field.send_keys('9405182765')
-email_id_field.send_keys('aashish.gupta@somaiya.edu')
-address_field.send_keys('147, Shivdarshan Bunglow, Shivgiri Colony, College Road, Nashik')
-pin_code_field.send_keys('422005')
-dob_field.send_keys('11/11/2003')
-gender_field.send_keys('Male')
+full_name_field.send_keys('Your_Name')
+contact_field.send_keys('Contact')
+email_id_field.send_keys('YOur_Email_ID')
+address_field.send_keys('Address')
+pin_code_field.send_keys('Pincode')
+dob_field.send_keys('DOB')
+gender_field.send_keys('Gender')
 code_field.send_keys('GNFPYC')
 
 # Submit the form
@@ -61,12 +61,12 @@ driver.save_screenshot(screenshot_path)
 driver.quit()
 
 # Send the email with the screenshot
-subject = 'Python (Selenium) Assignment - Aashish Gupta'
+subject = 'Python (Selenium) Assignment '
 body = 'Please find the attached screenshot of the Google form submission confirmation.'
-from_email = 'aashish.gupta@somaiya.edu'
-to_email = 'tech@themedius.ai'
-cc_email = 'hr@themedius.ai'
-password = 'tqie zour cuic pkro'
+from_email = 'Your_email_ID'
+to_email = 'Reciever_Email'
+cc_email = 'Reciever_Email'
+password = 'your_Email_App_Password'
 
 # Create the email message
 msg = MIMEMultipart()
